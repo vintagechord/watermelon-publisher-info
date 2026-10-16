@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Owner-operated documentation for WaterMelon YouTube Automation, a separate local tool for publishing authorized beat previews.">
+  <title>WaterMelon YouTube Automation</title>
+  <style>body{margin:0;background:#f7f9f6;color:#19251d;font:17px/1.65 system-ui,sans-serif}main{max-width:780px;margin:auto;padding:48px 24px 64px}nav{display:flex;gap:24px;flex-wrap:wrap;border-bottom:1px solid #cbd6cc;padding-bottom:20px}a{color:#17633e;text-underline-offset:3px}h1{font-size:clamp(30px,5vw,43px);line-height:1.15;margin:40px 0 20px}h2{font-size:23px;margin-top:34px}p,li{max-width:72ch}li{margin:10px 0}.eyebrow{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#48604d}.notice{background:#e8f0e8;border-left:4px solid #237443;padding:16px 20px}footer{border-top:1px solid #cbd6cc;margin-top:40px;padding-top:18px;font-size:14px;color:#48604d}</style>
+</head>
+<body>
+<main>
+  <nav aria-label="Documentation"><a href="https://vintagechord.github.io/watermelon-publisher-info/" aria-current="page">About the app</a><a href="https://vintagechord.github.io/watermelon-publisher-info/privacy.html">Privacy policy</a><a href="https://vintagechord.github.io/watermelon-publisher-info/usage.html">Operator usage terms</a></nav>
+  <p class="eyebrow">WaterMelon · Owner-operated tool</p>
+  <h1>WaterMelon YouTube Automation</h1>
+  <p>A separate, local application that helps the WaterMelon channel owner publish authorized beat previews to <a href="https://www.youtube.com/@iamwatermelon7">@iamwatermelon7 on YouTube</a>.</p>
+  <p class="notice">This app is used only by the channel owner and personally authorized operators. This website provides app information and policies; it does not provide a public sign-in or upload service.</p>
+  <h2>What the app does</h2>
+  <ul>
+    <li>Reads a limited amount of public WaterMelon beat information, preview audio and seller artwork.</li>
+    <li>Creates a visualizer video locally, with the seller's title and credit, relevant English metadata and a link to the beat's purchase page.</li>
+    <li>Uses the YouTube Data API to upload privately, check processing, set the thumbnail, and apply the owner's chosen visibility.</li>
+    <li>Rechecks sale availability and makes a video private when its source beat is confirmed unavailable. Checks are periodic, so changes are not immediate.</li>
+    <li>Preserves publishing history to avoid duplicate uploads, with bounded retries and operator pause controls.</li>
+  </ul>
+  <h2>Google authorization</h2>
+  <p>The owner authorizes the app through Google's OAuth screen. The app requests the <code>youtube.force-ssl</code> permission for the channel checks, video uploads and status changes it performs. It does not ask for the owner's Google password or sign-in cookies.</p>
+  <p>The worker runs on the owner's separate computer. It does not run inside the WaterMelon website, connect to the service's database, or change checkout, accounts or the player. Media rendering and YouTube uploads use the separate computer.</p>
+  <h2>Policies and contact</h2>
+  <p>Read the <a href="https://vintagechord.github.io/watermelon-publisher-info/privacy.html">privacy policy</a> for data access, storage and deletion, and the <a href="https://vintagechord.github.io/watermelon-publisher-info/usage.html">operator usage terms</a> for publishing controls.</p>
+  <p>For app support or privacy requests, contact the WaterMelon channel owner using the public contact information available on the <a href="https://www.youtube.com/@iamwatermelon7/about">channel's About page</a>.</p>
+  <footer>Updated October 16, 2026. App documentation maintained for the WaterMelon channel owner. This tool is not a Google or YouTube product.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the owner-operated WaterMelon YouTube Automation app.">
+  <title>Privacy policy · WaterMelon YouTube Automation</title>
+  <style>body{margin:0;background:#f7f9f6;color:#19251d;font:17px/1.65 system-ui,sans-serif}main{max-width:780px;margin:auto;padding:48px 24px 64px}nav{display:flex;gap:24px;flex-wrap:wrap;border-bottom:1px solid #cbd6cc;padding-bottom:20px}a{color:#17633e;text-underline-offset:3px}h1{font-size:clamp(30px,5vw,43px);line-height:1.15;margin:40px 0 20px}h2{font-size:23px;margin-top:34px}p,li{max-width:72ch}li{margin:10px 0}footer{border-top:1px solid #cbd6cc;margin-top:40px;padding-top:18px;font-size:14px;color:#48604d}</style>
+</head>
+<body>
+<main>
+  <nav aria-label="Documentation"><a href="https://vintagechord.github.io/watermelon-publisher-info/">About the app</a><a href="https://vintagechord.github.io/watermelon-publisher-info/privacy.html" aria-current="page">Privacy policy</a><a href="https://vintagechord.github.io/watermelon-publisher-info/usage.html">Operator usage terms</a></nav>
+  <h1>Privacy policy</h1>
+  <p>Effective October 16, 2026. This policy describes <strong>WaterMelon YouTube Automation</strong>, a local application used by the WaterMelon channel owner and personally authorized operators. The app uses YouTube API Services. Google's processing is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <h2>Information accessed and why</h2>
+  <ul>
+    <li><strong>Google authorization:</strong> OAuth client information and a refresh token let the app access the approved channel. An access token is kept in process memory. The app does not collect Google passwords or sign-in cookies.</li>
+    <li><strong>YouTube data:</strong> channel and video identifiers, ownership, processing and visibility information support safe uploads, channel verification, status changes and duplicate prevention. The app stores identifiers, temporary upload-session references and verification timestamps, rather than full API responses.</li>
+    <li><strong>Independent source material:</strong> public WaterMelon beat metadata, preview audio and seller artwork are used to create authorized promotional videos. Generated media, upload metadata and source-product publishing records are separate from YouTube API data.</li>
+  </ul>
+  <p>The app requests <code>youtube.force-ssl</code> only for its implemented channel checks, uploads, thumbnails and visibility changes. It does not collect viewer or subscriber lists, comments, analytics or advertising profiles.</p>
+  <h2>Use, sharing and storage</h2>
+  <p>Google receives the authorization requests, uploaded videos, artwork and metadata needed for the owner's selected YouTube actions. Public videos and their metadata become visible according to the privacy setting chosen by the owner.</p>
+  <p>The worker's files and state database are stored on the owner's separate computer. OAuth credentials use a private file, and access to the worker's state is restricted to the owner and approved operators. This documentation site does not receive the worker's tokens, media or database.</p>
+  <p>Google user data is not sold, used for advertising, used to train generalized AI models, or transferred for unrelated purposes. WaterMelon YouTube Automation's use and transfer of information received from Google APIs adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+  <h2>Retention and deletion</h2>
+  <p>When publishing is enabled and the worker is running, it rechecks authorization and channel ownership daily. Stored video IDs become due for refresh after 20 days, with at most two batches of 50 IDs per UTC day. Identifiers and upload sessions that cannot be refreshed are retired locally at 29 days. Finished videos no longer need their upload-session references.</p>
+  <p>Local expiry still runs when a running worker is paused or publishing is disabled. A computer that is off cannot perform scheduled work; its operator must run maintenance or remove expired API data within 30 days. Regenerable media for completed jobs is normally cleaned up after seven days.</p>
+  <p>The <code>disconnect</code> command requests Google token revocation. After successful revocation, it removes the local token and Google-derived identifiers, sessions and API history. A definite response that the refresh grant is invalid also pauses the worker and removes the affected token and API data. Temporary network or generic permission errors do not themselves erase current records; the retention deadline still applies.</p>
+  <p>You can revoke access through <a href="https://myaccount.google.com/permissions">Google's connected-app permissions</a>. The next successful authorization check detects a revoked grant. You can also ask the channel owner to delete locally stored Google data; the owner will handle the request as soon as possible and within seven calendar days. Any operator-created credential copies or backups must follow the same deletion policy.</p>
+  <p>Independent source-product IDs and publishing-attempt records remain to prevent accidental reposting after Google data is removed. They do not retain the deleted Google channel, video or session identifiers. Deleting this app's local data does not delete videos already stored by YouTube; those can be managed in <a href="https://studio.youtube.com/">YouTube Studio</a>.</p>
+  <h2>This documentation website</h2>
+  <p>These static pages do not set application cookies or include advertising or analytics scripts. They are hosted by GitHub Pages, which logs visitor IP addresses for security. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+  <h2>Contact and updates</h2>
+  <p>For privacy questions, complaints or deletion requests, contact the WaterMelon channel owner using the public contact information available on the <a href="https://www.youtube.com/@iamwatermelon7/about">channel's About page</a>. Material changes to the app's data practices will be reflected here before new data uses begin.</p>
+  <footer>WaterMelon YouTube Automation · Owner-operated app · Updated October 16, 2026.</footer>
+</main>
+</body>
+</html>
